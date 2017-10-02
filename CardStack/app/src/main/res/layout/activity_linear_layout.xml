@@ -10,7 +10,7 @@
     >
 
     <LinearLayout
-        android:layout_width="234dp"
+        android:layout_width="260dp"
         android:layout_height="0dp"
         android:layout_weight="7"
         android:animateLayoutChanges="true"
@@ -27,13 +27,14 @@
             />
 
         <ImageView
+            android:contentDescription="this is a heart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:src="@mipmap/heart"
             />
 
         <ImageView
+            android:contentDescription="this is a heart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -42,5 +43,12 @@
 
 
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Linear Layout"
+        />
 
 </LinearLayout>
