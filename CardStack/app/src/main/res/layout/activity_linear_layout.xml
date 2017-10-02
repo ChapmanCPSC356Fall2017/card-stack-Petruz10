@@ -49,6 +49,8 @@
         android:layout_height="wrap_content"
 
         android:text="Linear Layout"
+        android:clickable="true"
+        android:onClick="changeLayout()"
         />
 
 </LinearLayout>
