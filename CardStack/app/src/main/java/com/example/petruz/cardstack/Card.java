@@ -16,14 +16,24 @@ import static com.example.petruz.cardstack.Card.Suit.SPACE;
 
 public class Card
 {
-    public String cardNr;
-    public int cardColor;
-    public int suit;
-    public int nr;
+    protected String cardNr;
+    protected int cardColor;
+    protected int nr;
+    protected int suit;
+
+    private Suit s;
 
     Card(int c, Suit s)
     {
-        nr = c;
+        this.nr = c;
+        this.s = s;
+
+        getCardNr();
+        getCardSuit();
+    }
+
+    private void getCardNr()
+    {
         if(nr == 1)
         {
             cardNr = "A";
@@ -44,7 +54,10 @@ public class Card
         {
             cardNr = cardNr.valueOf(nr);
         }
+    }
 
+    private void getCardSuit()
+    {
         if (s  == HEART)
         {
             cardColor = Color.parseColor("#FF2200");
@@ -65,18 +78,6 @@ public class Card
             cardColor = Color.parseColor("#000000");
             suit = R.mipmap.clove;
         }
-/*
-        for(int i = 0; i<nr; i++)
-        {
-            View view = (View)findViewById(R.layout.suits);
-
-            ImageView imageView = new ImageView(this);
-
-            imageView.setImageResource(suit);
-        }*/
-
-
-
     }
 
     public enum Suit {

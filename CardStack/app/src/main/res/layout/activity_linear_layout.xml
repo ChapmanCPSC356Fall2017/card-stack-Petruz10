@@ -75,7 +75,7 @@
                 android:id="@+id/smallSuit2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="this is a heart"
+                android:contentDescription="@string/the_suit_of_the_card"
                 android:rotation="180"
                />
 

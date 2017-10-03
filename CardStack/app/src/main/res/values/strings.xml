@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">CardStack</string>
     <string name="linear_layout">Linear Layout</string>
+    <string name="the_suit_of_the_card">the suit of the card</string>
 </resources>
