@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:text="Frame Layout"
+
         />
 
     <LinearLayout
@@ -20,28 +21,67 @@
         android:animateLayoutChanges="true"
         android:background="@drawable/border"
         android:padding="10dp"
+        android:orientation="vertical"
+
         >
-
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="A"
-            android:textColor="#FF2200"
-            android:textSize="25sp" />
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="A"
+                android:textColor="#FF2200"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="this is a heart"
+                android:src="@mipmap/heart" />
+        </LinearLayout>
+
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="this is a heart"
-            android:src="@mipmap/heart" />
-
-        <ImageView
-            android:layout_width="wrap_content"
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:contentDescription="this is a heart"
             android:src="@mipmap/heart" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:gravity="end|bottom"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="this is a heart"
+                android:src="@mipmap/heart"
+                android:rotation="180"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:padding="10dp"
+                android:rotation="180"
+                android:text="A"
+                android:textColor="#FF2200"
+                android:textSize="25sp" />
+
+
+        </LinearLayout>
+
 
 
     </LinearLayout>
