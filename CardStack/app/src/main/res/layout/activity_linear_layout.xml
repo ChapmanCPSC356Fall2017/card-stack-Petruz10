@@ -7,6 +7,8 @@
     android:orientation="vertical"
     android:gravity="center"
     android:weightSum="10"
+    android:clickable="true"
+    android:onClick="changeCard"
     >
 
     <LinearLayout
@@ -15,9 +17,11 @@
         android:layout_weight="7"
         android:animateLayoutChanges="true"
         android:background="@drawable/border"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:weightSum="1">
 
         <TextView
+            android:id="@+id/num"
             android:padding="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -27,19 +31,35 @@
             />
 
         <ImageView
+            android:id="@+id/smallSuit"
             android:contentDescription="this is a heart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/heart"
             />
 
-        <ImageView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/suits"
+            android:gravity="center"
+            >
+
+          <!--  <ImageView
+                android:contentDescription="this is a heart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/heart"
+                />-->
+
+        </LinearLayout>
+       <!-- <ImageView
             android:contentDescription="this is a heart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:src="@mipmap/heart"
-            />
+            />-->
 
 
     </LinearLayout>
