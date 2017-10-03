@@ -4,7 +4,7 @@
     android:layout_height="400dp"
     android:padding="10dp"
     android:layout_marginTop="40dp"
-    android:layout_marginLeft="50dp"
+    android:layout_marginStart="50dp"
     android:background="@drawable/border"
     tools:context="com.example.petruz.cardstack.RelativeLayout">
 
@@ -13,14 +13,14 @@
         android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="A"
+        android:text="@string/a"
         android:textSize="25sp"
         android:textColor="#FF2200"
         />
 
     <ImageView
         android:id="@+id/firstHeart"
-        android:contentDescription="this is a heart"
+        android:contentDescription="@string/this_is_a_heart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/heart"
@@ -30,7 +30,7 @@
 
     <ImageView
         android:id="@+id/secondHeart"
-        android:contentDescription="this is a heart"
+        android:contentDescription="@string/this_is_a_heart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -43,7 +43,7 @@
         android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Relative"
+        android:text="@string/relative"
         android:textSize="25sp"
         android:textColor="#FF2200"
         android:layout_alignParentBottom="true"
@@ -55,7 +55,7 @@
         android:padding="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="A"
+        android:text="@string/a"
         android:textSize="25sp"
         android:textColor="#FF2200"
         android:layout_alignBottom="@+id/secondHeart"
@@ -67,7 +67,7 @@
 
     <ImageView
         android:id="@+id/firstHeart2"
-        android:contentDescription="this is a heart"
+        android:contentDescription="@string/this_is_a_heart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/heart"

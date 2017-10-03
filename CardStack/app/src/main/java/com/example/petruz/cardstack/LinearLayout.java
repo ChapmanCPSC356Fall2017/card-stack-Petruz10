@@ -16,7 +16,6 @@ import java.util.Stack;
 public class LinearLayout extends AppCompatActivity {
 
     private static final String TAG = "MyActivity";
-
     public Stack<Card> cardStack = new Stack<>();
 
     @Override
@@ -50,22 +49,13 @@ public class LinearLayout extends AppCompatActivity {
         }
 
         Collections.shuffle(cardStack);
-
-        newCard();
-
     }
 
     protected void onStart()
     {
         super.onStart();
-        Log.d(TAG, "on start");
-    }
-
-
-    public void changeLayout(View view)
-    {
-        // setContentView(R.layout.relativelayout);
-
+        newCard();
+        Log.d(TAG, "onStart");
     }
 
     public void changeCard(View view)
