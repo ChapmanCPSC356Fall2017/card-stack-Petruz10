@@ -78,6 +78,11 @@ public class LinearLayout extends AppCompatActivity {
         ViewGroup layout = (ViewGroup) findViewById(R.id.suits);
         layout.removeAllViews();
 
+        if(cardStack.empty())
+        {
+            finish();
+            return;
+        }
 
         Card topCard = cardStack.pop();
 
