@@ -94,7 +94,7 @@ public class LinearLayout extends AppCompatActivity {
         numTv2.setText(topCard.cardNr);
         numTv2.setTextColor(topCard.cardColor);
         smallImg2.setImageResource(topCard.suit);
-        
+
         for(int i = 0; i<topCard.nr; i++)
         {
             ImageView imageView = new ImageView(this);

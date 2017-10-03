@@ -53,7 +53,7 @@ public class Card
         else if(s == DIAMONDS)
         {
             cardColor = Color.parseColor("#FF2200");
-            suit = R.mipmap.heart;
+            suit = R.mipmap.diamond;
         }
         else if (s == SPACE)
         {
@@ -63,7 +63,7 @@ public class Card
         else if (s == CLOVE)
         {
             cardColor = Color.parseColor("#000000");
-            suit = R.mipmap.space;
+            suit = R.mipmap.clove;
         }
 /*
         for(int i = 0; i<nr; i++)
