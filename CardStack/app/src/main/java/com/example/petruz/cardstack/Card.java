@@ -4,6 +4,12 @@ import android.graphics.Color;
 import android.view.View;
 import android.widget.ImageView;
 
+import static android.R.attr.type;
+import static com.example.petruz.cardstack.Card.Suit.CLOVE;
+import static com.example.petruz.cardstack.Card.Suit.DIAMONDS;
+import static com.example.petruz.cardstack.Card.Suit.HEART;
+import static com.example.petruz.cardstack.Card.Suit.SPACE;
+
 /**
  * Created by Petruz on 02/10/17.
  */
@@ -15,7 +21,7 @@ public class Card
     public int suit;
     public int nr;
 
-    Card(int c, String type)
+    Card(int c, Suit s)
     {
         nr = c;
         if(nr == 1)
@@ -39,22 +45,22 @@ public class Card
             cardNr = cardNr.valueOf(nr);
         }
 
-        if (type == "heart")
+        if (s  == HEART)
         {
             cardColor = Color.parseColor("#FF2200");
             suit = R.mipmap.heart;
         }
-        else if(type == "diamonds")
+        else if(s == DIAMONDS)
         {
             cardColor = Color.parseColor("#FF2200");
             suit = R.mipmap.heart;
         }
-        else if (type == "space")
+        else if (s == SPACE)
         {
             cardColor = Color.parseColor("#000000");
             suit = R.mipmap.space;
         }
-        else if (type == "clove")
+        else if (s == CLOVE)
         {
             cardColor = Color.parseColor("#000000");
             suit = R.mipmap.space;
@@ -69,6 +75,12 @@ public class Card
             imageView.setImageResource(suit);
         }*/
 
+
+
+    }
+
+    public enum Suit {
+        HEART, SPACE, CLOVE, DIAMONDS;
     }
 
 }

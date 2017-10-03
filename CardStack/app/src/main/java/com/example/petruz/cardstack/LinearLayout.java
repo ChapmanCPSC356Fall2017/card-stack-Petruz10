@@ -35,13 +35,13 @@ public class LinearLayout extends AppCompatActivity {
        // Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
 
-        Card c = new Card(5, H);
-        Card c2 = new Card(6, S);
-        Card c3 = new Card(1, C);
-        Card c4 = new Card(11, D);
-        Card c5 = new Card(12, D);
-        Card c6 = new Card(13, S);
-        Card c7 = new Card (2, S);
+        Card c = new Card(5, Card.Suit.HEART);
+        Card c2 = new Card(6, Card.Suit.SPACE);
+        Card c3 = new Card(1, Card.Suit.CLOVE);
+        Card c4 = new Card(11, Card.Suit.DIAMONDS);
+        Card c5 = new Card(12, Card.Suit.DIAMONDS);
+        Card c6 = new Card(13, Card.Suit.SPACE);
+        Card c7 = new Card (2, Card.Suit.HEART);
 
 
         cardStack.push(c3);
@@ -54,7 +54,7 @@ public class LinearLayout extends AppCompatActivity {
 
         Collections.shuffle(cardStack);
 
-        test();
+        newCard();
 
     }
 
@@ -73,19 +73,34 @@ public class LinearLayout extends AppCompatActivity {
 
     public void changeCard(View view)
     {
-        imageView = null;
+        newCard();
+    }
+
+    private void newCard()
+    {
+        ViewGroup layout = (ViewGroup) findViewById(R.id.suits);
+        layout.removeAllViews();
+
 
         Card topCard = cardStack.pop();
 
         TextView numTv = (TextView) findViewById(R.id.num);
         ImageView smallImg = (ImageView) findViewById(R.id.smallSuit);
 
+        TextView numTv2 = (TextView) findViewById(R.id.num2);
+        ImageView smallImg2 = (ImageView) findViewById(R.id.smallSuit2);
+
         Log.d(TAG, "change card");
         numTv.setText(topCard.cardNr);
         numTv.setTextColor(topCard.cardColor);
         smallImg.setImageResource(topCard.suit);
 
-        ViewGroup layout = (ViewGroup) findViewById(R.id.suits);
+        numTv2.setText(topCard.cardNr);
+        numTv2.setTextColor(topCard.cardColor);
+        smallImg2.setImageResource(topCard.suit);
+
+
+
 
         for(int i = 0; i<topCard.nr; i++)
         {
@@ -93,24 +108,5 @@ public class LinearLayout extends AppCompatActivity {
             imageView.setImageResource(topCard.suit);
             layout.addView(imageView);
         }
-    }
-
-    private void test()
-    {
-        Card topCard = cardStack.pop();
-
-        TextView numTv = (TextView) findViewById(R.id.num);
-        ImageView smallImg = (ImageView) findViewById(R.id.smallSuit);
-
-        Log.d(TAG, "change card");
-        numTv.setText(topCard.cardNr);
-        numTv.setTextColor(topCard.cardColor);
-        smallImg.setImageResource(topCard.suit);
-
-        ViewGroup layout = (ViewGroup) findViewById(R.id.suits);
-
-        imageView = new ImageView(this);
-        imageView.setImageResource(topCard.suit);
-        layout.addView(imageView);
     }
 }

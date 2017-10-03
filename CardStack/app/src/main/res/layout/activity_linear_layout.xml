@@ -8,8 +8,9 @@
     android:gravity="center"
     android:weightSum="10"
     android:clickable="true"
-    android:onClick="changeCard"
-    >
+    android:onClick="changeCard">
+    <!--lock orientation-->
+
 
     <LinearLayout
         android:layout_width="260dp"
@@ -17,50 +18,78 @@
         android:layout_weight="7"
         android:animateLayoutChanges="true"
         android:background="@drawable/border"
-        android:padding="10dp"
+        android:orientation="vertical"
         android:weightSum="1">
-
-        <TextView
-            android:id="@+id/num"
-            android:padding="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="A"
-            android:textSize="25sp"
-            android:textColor="#FF2200"
-            />
-
-        <ImageView
-            android:id="@+id/smallSuit"
-            android:contentDescription="this is a heart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/heart"
-            />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/suits"
-            android:gravity="center"
-            >
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-          <!--  <ImageView
-                android:contentDescription="this is a heart"
+            <TextView
+                android:id="@+id/num"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/heart"
-                />-->
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="A"
+                android:textColor="#FF2200"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:id="@+id/smallSuit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="this is a heart"
+                android:src="@mipmap/heart" />
 
         </LinearLayout>
-       <!-- <ImageView
-            android:contentDescription="this is a heart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:src="@mipmap/heart"
-            />-->
 
+        <GridLayout
+            android:id="@+id/suits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:columnCount="4"
+            android:padding="10dp"
+            android:rowCount="3">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="this is a heart"
+                android:src="@mipmap/heart" />
+
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="bottom"
+            android:gravity="right|bottom"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/smallSuit2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="this is a heart"
+                android:rotation="180"
+                android:src="@mipmap/heart" />
+
+            <TextView
+                android:id="@+id/num2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:rotation="180"
+                android:text="A"
+                android:textColor="#FF2200"
+                android:textSize="25sp" />
+
+
+        </LinearLayout>
 
     </LinearLayout>
 
